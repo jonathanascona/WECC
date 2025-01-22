@@ -1,0 +1,40 @@
+---
+title: "Weather Data Analysis"
+output: html_document
+---
+This is cool stuff
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(lubridate)
+library(GGally)
+
+
+
+# Load the dataset
+file_path <- "scraper\\weather_data(83440_2020-01-01_2021-01-01).csv"  # Replace with your CSV file path
+data <- read_csv(file_path)
+
+# Display the first few rows of the dataset
+head(data)
+
+
+
+# Display dataset info
+str(data)
+# Display basic statistics of numerical columns
+summary(data)
+
+# Convert the Date column to Date format
+data$Date <- as.Date(data$Date, format="%Y-%m-%d")
+
+# Plot: Temperature over time
+ggplot(data, aes(x = Date, y = `Temperature (F)`)) +
+  geom_line(color = "blue") +
+  labs(title = "Temperature Over Time", x = "Date", y = "Temperature (F)") +
+  theme_minimal()
+
+```
