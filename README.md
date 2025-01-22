@@ -1,3 +1,5 @@
+# WECC
+
 I included 3 different methods to load the data
 
 .qmd, which is a markdown file for r
