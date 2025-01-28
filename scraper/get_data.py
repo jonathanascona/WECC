@@ -4,7 +4,7 @@ from datetime import datetime
 
 def get_lat_lon_from_zip(zip_code):
     # Using OpenCage Geocoder API for zip code to latitude/longitude conversion
-    api_key = '865659096a844ab8bbcdcbbf5bd3f9df'  # Get a free key from https://opencagedata.com/
+    api_key = 'KEY GOES HERE'  # Get a free key from https://opencagedata.com/
     url = f'https://api.opencagedata.com/geocode/v1/json?q={zip_code}&key={api_key}'
     response = requests.get(url)
     print(response.status_code)
@@ -26,7 +26,7 @@ def get_historical_weather_data(lat, lon, start_date, end_date):
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
     
     # Fetch the historical data from Visual Crossing Weather API
-    api_key = '9LMKMRMHAM96Q8CKC9HKLV9EW'  # Use your own Visual Crossing API key
+    api_key = 'KEY GOES HERE'  # Use your own Visual Crossing API key
     url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{lat},{lon}/{start_date.date()}/{end_date.date()}?key={api_key}'
     
     print("Requesting weather data...")
