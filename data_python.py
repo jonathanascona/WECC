@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-file_path = 'scraper\weather_data(83440_2020-01-01_2021-01-01).csv'  # Replace with your CSV file path
+file_path = 'scraper/2000-2020-rexburg.csv'  # Replace with your CSV file path
 data = pd.read_csv(file_path)
 
 # Display the first few rows of the dataset
