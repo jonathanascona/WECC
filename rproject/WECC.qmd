@@ -1,0 +1,42 @@
+---
+title: "WECC"
+format: html
+editor: visual
+---
+
+# Install necessary packages
+install.packages("tidyverse")
+
+# Load packages
+library(tidyverse)
+
+# Load your data (assuming CSV for example)
+"C:\Users\jonat\Documents\GitHub\WECC\rproject\mainData.RData" <- read.csv
+
+# Check the structure of the data
+glimpse(data)
+
+# Step 1: Handle missing values (replace or drop NA)
+data <- data %>% drop_na()  # Or use fill_na() as needed
+
+# Step 2: Rename columns for clarity
+data <- data %>% rename(
+  column1_clean = old_column1,
+  column2_clean = old_column2
+)
+
+# Step 3: Convert column types if necessary
+data <- data %>% mutate(
+  column1_clean = as.numeric(column1_clean),
+  column2_clean = as.Date(column2_clean, format="%Y-%m-%d")
+)
+
+# Step 4: Remove duplicates
+data <- data %>% distinct()
+
+# Step 5: Filter or clean outliers if necessary
+data <- data %>% filter(column1_clean > 0)  # Example condition
+
+# Step 6: Export the cleaned data
+write.csv(data, "cleaned_data.csv", row.names = FALSE)
+
