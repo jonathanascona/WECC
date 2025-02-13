@@ -1,18 +1,3 @@
-# WECC Project Instructions for Group
-
-There are 3 different methods to load the data
-
-.qmd (markdown file for r) 
-.py (basic python file) 
-.ipynb (jupyter notebook file) 
-
-Clone this repository to experiment with the data on your own
-
-In the scraper folder, there's have a program that can collect data for whichever dates or times you need,
-but the program will need api keys, both of which you should be able to get for free
-
-The scraper also contain some files with sample data
-
 ## Western Electricity Coordinating Council Prediction Project
 
 **Project Introduction: Predictive Maintenance for Electric Grids in Rexburg, Idaho**
